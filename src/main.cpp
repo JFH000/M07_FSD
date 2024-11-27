@@ -331,17 +331,17 @@ void checkMatrix(byte *pointerRegMatrix, byte *pointerRegCar)
     {status = STATUS_LOST;}
   else if(points == 0){
       level = 0;
-      delaytime = 2000;
+      delaytime = 4000;
       status = STATUS_LEVEL;
     }else if(points == 10){
       level=1;
+      delaytime = 3000;
+      status = STATUS_LEVEL;
+    }else if(points == 25){
+      level=2;
       delaytime = 1000;
       status = STATUS_LEVEL;
-    }else if(points == 20){
-      level=2;
-      delaytime = 500;
-      status = STATUS_LEVEL;
-    }else if(points == 40){
+    }else if(points == 45){
       level=3;
       status = STATUS_WIN;
     }else{
